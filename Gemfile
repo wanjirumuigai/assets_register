@@ -16,7 +16,7 @@ gem "puma", "~> 5.0"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
+ gem "rack-cors"
 
 # Use Serialized data
 gem "active_model_serializers"
@@ -35,3 +35,5 @@ group :development do
   gem "byebug"
 end
 
+
+gem "jwt", "~> 2.7"
