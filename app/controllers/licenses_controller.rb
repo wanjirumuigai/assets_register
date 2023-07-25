@@ -17,6 +17,12 @@ rescue_from ActiveRecord::RecordInvalid, with: :invalid_params
     render json: new_license, status: :created
   end
 
+  def update
+    license = find_license()
+    license.update!(license_params)
+    render json: license, status: :accepted
+  end
+
 
   private
 
