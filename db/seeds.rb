@@ -7,6 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 users = User.create([
-  {firstname: "Pauline", lastname:"Muigai", email: "pauline@kise.ac.ke", password:"123", role: "Admin", department: 'ICT', designation:'ICT Officer' }
+  {firstname: "Pauline", lastname:"Muigai", email: "pauline@kise.ac.ke", password:"123", role: "super_admin", department: 'ICT', designation:'ICT Officer' },
+  {firstname: "Charles", lastname:"Swaleh", email: "charles@kise.ac.ke", password:"charles", role: "admin", department: 'ICT', designation:'Developer' }
+  {firstname: "Fabian", lastname:"Matata", email: "fabian@kise.ac.ke", password:"fabian", role: "user", department: 'ICT', designation:'Developer' }
 ])
 
