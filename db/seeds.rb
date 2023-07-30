@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+#
+
+puts "Seeding the data..."
+
 
 users = User.create([
   {firstname: "Pauline", lastname:"Muigai", email: "pauline@kise.ac.ke", password:"123", role: "super_admin", department: 'ICT', designation:'ICT Officer' },
@@ -28,71 +32,71 @@ Asset.create([
     asset_tag: "IT5637",
     serial_no: "ABC123",
     category: "Desktops",
-    status: "in_use"
-    purchase_price: 100_000,
+    status: "working",
+    purchase_price: 100_000
   },
   {
     asset_name: "Asus",
     model: "Asus Zenbook",
     asset_tag: "IT678",
-    serial_no: "ytu3771",
-    category: "laptops",
-    status: "deployed",
-    purchase_price: 120_000,
+    serial_no: "YHF1DBVS32",
+    category: "Laptops",
+    status: "damaged",
+    purchase_price: 120_000
   },
   {
     asset_name: "HP LAPTOP",
     model: "HP",
     asset_tag: "ITHP091",
     serial_no: "YDHDBVS3",
-    category: "laptops",
+    category: "Laptops",
     status: "obsolete",
-    purchase_price: 45_000,
+    purchase_price: 45_000
   },
   {
     asset_name: "HP LAPTOP",
     model: "HP",
     asset_tag: "ITHP091",
     serial_no: "YDHDBVS2",
-    category: "laptops",
-    status: "obsolete",
-    purchase_price: 45_000,
+    category: "Laptops",
+    status: "in_repair",
+    purchase_price: 45_000
   },
   {
     asset_name: "HP LAPTOP",
     model: "HP",
     asset_tag: "ITHP091",
     serial_no: "YDHDBVS1",
-    category: "laptops",
+    category: "Laptops",
     status: "obsolete",
-    purchase_price: 45_000,
+    purchase_price: 45_000
   },
   {
     asset_name: "Laptop",
     model: "Asus Zenbook",
-    asset_tag: "KISE/ICT/0526",
+    asset_tag: "KISE/ICT/0525",
     serial_no: "GH5672H",
     category: "Laptops",
-    status: "Deployed",
-    purchase_price: 172_000,
+    status: "working",
+    purchase_price: 172_000
+  },
+  {
+    asset_name: "Laptop",
+    model: "Asus Zenbook",
+    asset_tag: "KISE/ICT/0506",
+    serial_no: "KJH878198HJK",
+    category: "Laptops",
+    status: "working",
+    purchase_price: 100_000
   },
   {
     asset_name: "Laptop",
     model: "Asus Zenbook",
     asset_tag: "KISE/ICT/0526",
-    serial_no: "hdgdy7898",
+    serial_no: "HQI432871HJ",
     category: "Laptops",
-    status: "Ready to Deploy",
-    purchase_price: 100_000,
-  },
-  {
-    asset_name: "Laptop",
-    model: "Asus Zenbook",
-    asset_tag: "KISE/ICT/0526",
-    serial_no: "hdgdy7898",
-    category: "Laptops",
-    status: "Ready to Deploy",
-    purchase_price: 150_000,
+    status: "working",
+    purchase_price: 150_000
   },
   {
     asset_name: "UPS",
@@ -100,8 +104,8 @@ Asset.create([
     asset_tag: "KISE/ICT/0527",
     serial_no: "HJDT2677",
     category: "Accessories",
-    status: "Broken",
-    purchase_price: 7_500,
+    status: "damaged",
+    purchase_price: 7_500
   },
   {
     asset_name: "Projector",
@@ -109,8 +113,8 @@ Asset.create([
     asset_tag: "KISE/ICT/0528",
     serial_no: "FGH4572",
     category: "Audio/Visual",
-    status: "Obsolete",
-    purchase_price: 50_000,
+    status: "damaged",
+    purchase_price: 50_000
   },
   {
     asset_name: "Mouse",
@@ -118,16 +122,19 @@ Asset.create([
     asset_tag: "KISE/ICT/0981",
     serial_no: "KISE/ICT/1083",
     category: "Accessories",
-    status: "Ready to Deploy",
-    purchase_price: 999,
+    status: "working",
+    purchase_price: 999
   },
   {
     asset_name: "Keyboard",
     model: "Logitech",
-    asset_tag: "KISE/ICT/0526",
+    asset_tag: "KISE/ICT/0529",
     serial_no: "CN256781",
     category: "Accessories",
-    status: "Deployed",
-    purchase_price: 1000,
+    status: "working",
+    purchase_price: 1000
   }
 ])
+
+
+puts "Seeding done. Happy development. :)"
