@@ -7,6 +7,11 @@ skip_before_action :authorized
     render json: assets, status: :ok
   end
 
+  def show
+    asset = find_asset()
+    render json: asset, status: :ok
+  end
+
   private
 
   def find_asset
