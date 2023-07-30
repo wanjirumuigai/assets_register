@@ -24,7 +24,7 @@ def index
 
   def update
     user = User.find(params[:id])
-    user.update!(user_params)
+    user.update!(update_params)
     render json: user, status: :created
   end
 
@@ -32,6 +32,10 @@ def index
   def user_params
     params.require(:user).permit(:id, :firstname, :lastname,:email,:password, :password_confirmation, :role, :department, :designation)
 
+  end
+
+  def update_params
+    params.permit(:password,  :department, :designation, :role)
   end
   def user_not_found
     render json: { error: "User not found" }, status: :not_found

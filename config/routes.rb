@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   post '/login', to: 'auth#create'
 
+  post '/users/:id', to: 'users#update'
+
 end
