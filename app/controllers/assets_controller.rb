@@ -1,5 +1,6 @@
 class AssetsController < ApplicationController
 rescue_from ActiveRecord::RecordNotFound, with: :asset_not_found
+rescue_from ActiveRecord::RecordInvalid, with: :invalid_asset_params
 skip_before_action :authorized
 
   def index
@@ -12,6 +13,12 @@ skip_before_action :authorized
     render json: asset, status: :ok
   end
 
+  def update
+    asset = find_asset()
+    asset.update!(update_params)
+    render json: asset, status: :accepted
+  end
+
   private
 
   def find_asset
@@ -20,5 +27,13 @@ skip_before_action :authorized
 
   def asset_not_found
     render json: {error: "Asset not found"}, status: :not_found
+  end
+
+  def update_params
+    params.permit(:asset_name, :model, :asset_tag, :serial_no, :category, :status, :purchase_price, :marked_for_disposal)
+  end
+
+  def invalid_asset_params(invalid)
+    render json: {error: invalid.record.errors}, status: :unprocessable_entity
   end
 end
