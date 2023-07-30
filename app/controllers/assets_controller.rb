@@ -19,6 +19,11 @@ skip_before_action :authorized
     render json: asset, status: :accepted
   end
 
+  def create
+    asset = Asset.create!(create_params)
+    render json: asset, status: :created
+  end
+
   private
 
   def find_asset
@@ -31,6 +36,10 @@ skip_before_action :authorized
 
   def update_params
     params.permit(:asset_name, :model, :asset_tag, :serial_no, :category, :status, :purchase_price, :marked_for_disposal)
+  end
+
+  def create_params
+    params.permit(:asset_name, :model, :asset_tag, :serial_no, :category, :status, :purchase_price)
   end
 
   def invalid_asset_params(invalid)
