@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :assigns
+  resources :assigns, only: [:index, :show, :update, :create]
   resources :users, only: [:index, :show, :update, :create]
   resources :licenses, only: [:index, :show, :update, :create]
   resources :assets, only: [:index, :show, :update, :create]
