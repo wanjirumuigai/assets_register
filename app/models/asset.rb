@@ -4,4 +4,7 @@ class Asset < ApplicationRecord
   validates :purchase_price, numericality: { only_integer: true }
   validates :status, inclusion: { in: %w(working damaged obsolete in_repair) }
 
+  
+  has_many :assigns
+  has_many :users, through: :assigns
 end
