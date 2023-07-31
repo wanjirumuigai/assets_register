@@ -5,7 +5,7 @@ skip_before_action :authorized
 
   def index
     assets = Asset.all
-    render json: assets, status: :ok
+    render json: assets, include: :assigns, status: :ok
   end
 
   def show

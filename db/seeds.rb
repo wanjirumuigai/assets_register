@@ -24,6 +24,10 @@ users = User.create([
   {license_name: "Adobe Creative Cloud", purchase_date: "2021-07-01", expiry_date: "2023-07-01", number_of_users: 7}
  ])
 
+ Assign.create([
+  {user_id: 1, asset_id:1, location: "Server Room", department: "ICT", assigned_by: "Pauline" },
+  {user_id: 1, asset_id:2, location: "Grace Seneiya", department: "Housekeeping", assigned_by: "Pauline" }
+ ])
 
 Asset.create([
   {
