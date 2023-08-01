@@ -12,8 +12,8 @@ puts "Seeding the data..."
 
 users = User.create([
   {firstname: "Pauline", lastname:"Muigai", email: "pauline@kise.ac.ke", password:"123", role: "super_admin", department: 'ICT', designation:'ICT Officer' },
-  {firstname: "Charles", lastname:"Swaleh", email: "charles@kise.ac.ke", password:"charles", role: "admin", department: 'ICT', designation:'Developer' },
-  {firstname: "Fabian", lastname:"Matata", email: "fabian@kise.ac.ke", password:"fabian", role: "user", department: 'ICT', designation:'Developer' }
+  {firstname: "Charles", lastname:"Swaleh", email: "charles@kise.ac.ke", password:"charles", role: "Admin", department: 'ICT', designation:'Developer' },
+  {firstname: "Fabian", lastname:"Matata", email: "fabian@kise.ac.ke", password:"fabian", role: "User", department: 'ICT', designation:'Developer' }
 ])
 
  License.create([
@@ -24,10 +24,7 @@ users = User.create([
   {license_name: "Adobe Creative Cloud", purchase_date: "2021-07-01", expiry_date: "2023-07-01", number_of_users: 7}
  ])
 
- Assign.create([
-  {user_id: 1, asset_id:1, location: "Server Room", department: "ICT", assigned_by: "Pauline" },
-  {user_id: 1, asset_id:2, location: "Grace Seneiya", department: "Housekeeping", assigned_by: "Pauline" }
- ])
+
 
 Asset.create([
   {
@@ -139,6 +136,11 @@ Asset.create([
     purchase_price: 1000
   }
 ])
+
+Assign.create([
+  {user_id: 1, asset_id:1, location: "Server Room", department: "ICT", assigned_by: "Pauline", assign_date:"2023-07-01", return_date: "2023-08-01", received_by: "Frank" },
+  {user_id: 1, asset_id:2, location: "Grace Seneiya", department: "Housekeeping", assigned_by: "Pauline" }
+ ])
 
 
 puts "Seeding done. Happy development. :)"
