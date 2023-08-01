@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   post '/users/:id', to: 'users#update'
 
+  # get the dashboard contents
+  get "/dashboard", to: "assets#dashboard"
+
 end
