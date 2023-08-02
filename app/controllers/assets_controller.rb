@@ -24,6 +24,36 @@ skip_before_action :authorized
     render json: asset, status: :created
   end
 
+  # dashboard route to show all dashboard metrics
+  def dashboard
+    users = User.all.count
+
+    total_assets = Asset.all.count
+
+    assigned_assets = Assign.all.count
+
+    assets_in_repair = Asset.all.select {|asset| asset.status == "in_repair"}.count
+
+    assets_obsolete = Asset.all.select {|asset| asset.status == "obsolete"}.count
+
+    licenses = License.all.count
+
+    expired_licenses = License.all.select {|license|   license.expiry_date < Date.today }.count
+
+    categories = Asset.all.map { |asset| asset.category }.uniq.count
+
+    render json: {
+      users: users,
+      active_assets: total_assets,
+      allocated_assets: assigned_assets,
+      asset_categories: categories,
+      under_repair: assets_in_repair,
+      disposed_assets: assets_obsolete,
+      licenses: licenses,
+      expired_licenses: expired_licenses
+    }, status: :ok
+  end
+
   private
 
   def find_asset
