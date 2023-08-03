@@ -14,9 +14,18 @@ def show
 end
 
 def create
-  assign = Assign.create!(assign_params)
-  render json: assign, status: :created
-end
+
+  asset_params = params.require(:_json)
+
+    assets = asset_params.map do |asset_data|
+      Assign.create(asset_data.permit(:asset_id, :assigned_by, :department, :location, :user_id))
+    end
+
+    render json: assets
+  end
+
+
+
 
 def update
   assign = Assign.find(params[:id])
