@@ -1,6 +1,6 @@
 class AssignsController < ApplicationController
   wrap_parameters :assign, include: [:id, :user_id, :asset_id, :location, :department, :assigned_by, :is_returned, :return_date, :received_by]
-  skip_before_action :authorized, only: [:index, :show, :create, :update]
+ 
   rescue_from ActiveRecord::RecordNotFound, with: :user_not_found
   rescue_from ActiveRecord::RecordInvalid, with: :invalid_params
 def index

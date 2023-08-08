@@ -1,7 +1,7 @@
 class LicensesController < ApplicationController
 rescue_from ActiveRecord::RecordNotFound, with: :license_not_found
 rescue_from ActiveRecord::RecordInvalid, with: :invalid_params
-skip_before_action :authorized
+
   def index
     licenses = License.all
     render json: licenses, status: :ok
