@@ -1,7 +1,7 @@
 class AssetsController < ApplicationController
 rescue_from ActiveRecord::RecordNotFound, with: :asset_not_found
 rescue_from ActiveRecord::RecordInvalid, with: :invalid_asset_params
-skip_before_action :authorized
+
 
   def index
     assets = Asset.all

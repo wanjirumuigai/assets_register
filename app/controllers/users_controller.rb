@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   wrap_parameters :user, include: [:id, :firstname, :lastname,:email,:password, :password_confirmation, :role, :department, :designation]
-  skip_before_action :authorized, only: [:index, :show, :create, :update]
+ 
   rescue_from ActiveRecord::RecordNotFound, with: :user_not_found
   rescue_from ActiveRecord::RecordInvalid,
   with: :invalid_params
