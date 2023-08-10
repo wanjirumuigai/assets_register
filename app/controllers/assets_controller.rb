@@ -65,11 +65,11 @@ rescue_from ActiveRecord::RecordInvalid, with: :invalid_asset_params
   end
 
   def update_params
-    params.permit(:asset_name, :model, :asset_tag, :serial_no, :category, :status, :purchase_price, :marked_for_disposal)
+    params.permit(:asset_name, :model, :asset_tag, :serial_no, :category, :status, :purchase_price, :marked_for_disposal, :notes)
   end
 
   def create_params
-    params.permit(:asset_name, :model, :asset_tag, :serial_no, :category, :status, :purchase_price)
+    params.permit(:asset_name, :model, :asset_tag, :serial_no, :category, :status, :purchase_price,:notes)
   end
 
   def invalid_asset_params(invalid)
