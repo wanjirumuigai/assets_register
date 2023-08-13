@@ -34,7 +34,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :invalid_asset_params
 
     assets_in_repair = Asset.all.select {|asset| asset.status == "in_repair"}.count
 
-    assets_obsolete = Asset.all.select {|asset| asset.status == "obsolete"}.count
+    assets_obsolete = Asset.all.select {|asset| asset.marked_for_disposal == true}.count
 
     licenses = License.all.count
 
