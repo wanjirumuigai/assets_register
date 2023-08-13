@@ -11,7 +11,7 @@ puts "Seeding the data..."
 
 
 users = User.create([
-  {firstname: "Pauline", lastname:"Muigai", email: "pauline@kise.ac.ke", password:"123", role: "super_admin", department: 'ICT', designation:'ICT Officer' },
+  {firstname: "Pauline", lastname:"Muigai", email: "pauline@kise.ac.ke", password:"123", role: "Super Admin", department: 'ICT', designation:'ICT Officer' },
   {firstname: "Charles", lastname:"Swaleh", email: "charles@kise.ac.ke", password:"charles", role: "Admin", department: 'ICT', designation:'Developer' },
   {firstname: "Fabian", lastname:"Matata", email: "fabian@kise.ac.ke", password:"fabian", role: "User", department: 'ICT', designation:'Developer' }
 ])
@@ -34,7 +34,8 @@ Asset.create([
     serial_no: "ABC123",
     category: "Desktops",
     status: "working",
-    purchase_price: 100_000
+    purchase_price: 100_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "Asus",
@@ -43,7 +44,8 @@ Asset.create([
     serial_no: "YHF1DBVS32",
     category: "Laptops",
     status: "damaged",
-    purchase_price: 120_000
+    purchase_price: 120_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "HP LAPTOP",
@@ -52,7 +54,8 @@ Asset.create([
     serial_no: "YDHDBVS3",
     category: "Laptops",
     status: "obsolete",
-    purchase_price: 45_000
+    purchase_price: 45_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "HP LAPTOP",
@@ -61,7 +64,8 @@ Asset.create([
     serial_no: "YDHDBVS2",
     category: "Laptops",
     status: "in_repair",
-    purchase_price: 45_000
+    purchase_price: 45_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "HP LAPTOP",
@@ -70,7 +74,8 @@ Asset.create([
     serial_no: "YDHDBVS1",
     category: "Laptops",
     status: "obsolete",
-    purchase_price: 45_000
+    purchase_price: 45_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "Laptop",
@@ -79,7 +84,8 @@ Asset.create([
     serial_no: "GH5672H",
     category: "Laptops",
     status: "working",
-    purchase_price: 172_000
+    purchase_price: 172_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "Laptop",
@@ -88,7 +94,8 @@ Asset.create([
     serial_no: "KJH878198HJK",
     category: "Laptops",
     status: "working",
-    purchase_price: 100_000
+    purchase_price: 100_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "Laptop",
@@ -97,7 +104,8 @@ Asset.create([
     serial_no: "HQI432871HJ",
     category: "Laptops",
     status: "working",
-    purchase_price: 150_000
+    purchase_price: 150_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "UPS",
@@ -106,7 +114,8 @@ Asset.create([
     serial_no: "HJDT2677",
     category: "Accessories",
     status: "damaged",
-    purchase_price: 7_500
+    purchase_price: 7_500,
+    notes: "Sample note on product"
   },
   {
     asset_name: "Projector",
@@ -115,7 +124,8 @@ Asset.create([
     serial_no: "FGH4572",
     category: "Audio/Visual",
     status: "damaged",
-    purchase_price: 50_000
+    purchase_price: 50_000,
+    notes: "Sample note on product"
   },
   {
     asset_name: "Mouse",
@@ -124,7 +134,8 @@ Asset.create([
     serial_no: "KISE/ICT/1083",
     category: "Accessories",
     status: "working",
-    purchase_price: 999
+    purchase_price: 999,
+    notes: "Sample note on product"
   },
   {
     asset_name: "Keyboard",
@@ -133,7 +144,8 @@ Asset.create([
     serial_no: "CN256781",
     category: "Accessories",
     status: "working",
-    purchase_price: 1000
+    purchase_price: 1000,
+    notes: "Sample note on product"
   }
 ])
 
