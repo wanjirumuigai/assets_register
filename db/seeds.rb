@@ -150,7 +150,7 @@ Asset.create([
 ])
 
 Assign.create([
-  {user_id: 1, asset_id:1, location: "Server Room", department: "ICT", assigned_by: "Pauline", assign_date:"2023-07-01", return_date: "2023-08-01", received_by: "Frank" },
+  {user_id: 1, asset_id:1, location: "Server Room", department: "ICT", assigned_by: "Pauline", assign_date:"2023-07-01", return_date: "2023-08-01", received_by: "Frank", is_returned: true},
   {user_id: 1, asset_id:2, location: "Grace Seneiya", department: "Housekeeping", assigned_by: "Pauline" }
  ])
 
